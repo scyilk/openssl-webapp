@@ -2,19 +2,9 @@
 
 OPENSSL_VERSION="openssl-1.1.1k"
 OPENSSL_DIR=${OPENSSL_VERSION}
-OPENSSL_JS_PATH="../src/core/openssl.js"
-OPENSSL_WASM_PATH="../public/openssl.wasm"
 
 if [ -d ${OPENSSL_DIR} ]; then
   rm -rf ${OPENSSL_DIR}
-fi
-
-if [ -f ${OPENSSL_JS_PATH} ]; then
-  rm -rf ${OPENSSL_JS_PATH}
-fi
-
-if [ -f ${OPENSSL_WASM_PATH} ]; then
-  rm -rf ${OPENSSL_WASM_PATH}
 fi
 
 if [ ! -f ${OPENSSL_VERSION}.tar.gz ]; then
