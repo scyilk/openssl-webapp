@@ -64,8 +64,3 @@ make apps/progs.h
 sed -i 's/$(CROSS_COMPILE)//' Makefile
 
 emmake make -j 16 build_generated libssl.a libcrypto.a apps/openssl
-
-mv apps/openssl apps/openssl.js
-sed -i.old '1s;^;\/* eslint-disable *\/;' apps/openssl.js
-cp apps/openssl.js ../../src/core/
-cp apps/openssl.wasm ../../public/
